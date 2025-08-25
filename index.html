@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 A Special Question For You 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Hearts Animation -->
+    <div class="hearts-container"></div>
+    
+    <!-- Page 1: Initial Question -->
+    <div id="page1" class="page active">
+        <div class="content">
+            <h1 class="question">Do you love me? 💕</h1>
+            <div class="gif-container">
+                <div class="tenor-gif-embed" data-postid="10378108104842377379" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                    <a href="https://tenor.com/view/i-wuv-you-i-luv-u-loves-ya-heart-it-hey-i-love-you-gif-10378108104842377379">I Wuv You I Luv U GIF</a> from <a href="https://tenor.com/search/i+wuv+you-gifs">I Wuv You GIFs</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="goToFinalPage()">Yes ✨</button>
+                <button class="btn no-btn" data-next-page="2" id="page1NoBtn" onclick="goToPage(2)">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Second Chance -->
+    <div id="page2" class="page">
+        <div class="content">
+            <h1 class="question">Please think again! 💖</h1>
+            <div class="gif-container">
+                <div class="tenor-gif-embed" data-postid="16146866572750782547" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                    <a href="https://tenor.com/view/bearish-bearishaf-bearish-af-bear-teddy-gif-16146866572750782547">Bearish Bearishaf GIF</a> from <a href="https://tenor.com/search/bearish-gifs">Bearish GIFs</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="goToFinalPage()">Yes ✨</button>
+                <button class="btn no-btn" data-next-page="3" onclick="goToPage(3)">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Third Chance -->
+    <div id="page3" class="page">
+        <div class="content">
+            <h1 class="question">Ek aur baar soch lo! 😍</h1>
+            <div class="gif-container">
+                <div class="tenor-gif-embed" data-postid="10724548261518110179" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                    <a href="https://tenor.com/view/outside-frown-sad-alone-upset-gif-10724548261518110179">Outside Frown GIF</a> from <a href="https://tenor.com/search/outside-gifs">Outside GIFs</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="testGoToPage(4)">Yes ✨</button>
+                <button class="btn no-btn moving-btn" id="movingNoBtn3">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Final Attempt with Moving No Button -->
+    <div id="page4" class="page">
+        <div class="content">
+            <h1 class="question">Man jao na! Kitna bhav khaogi 😏</h1>
+            <div class="buttons">
+                <button class="btn yes-btn">Yes ✨</button>
+                <button class="btn no-btn moving-btn" id="movingNoBtn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Page: Success -->
+    <div id="finalPage" class="page">
+        <div class="content">
+            <h1 class="final-message">Hehehehe! I knew it! <br>Love you a lot ❤️🐻</h1>
+            <div class="bubu-dudu-container">
+                <div class="tenor-gif-embed" data-postid="15435204016040493403" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                    <a href="https://tenor.com/view/bubu-dudu-kiss-bubududukiwi-gif-15435204016040493403">Bubu Dudu Kiss Sticker</a> from <a href="https://tenor.com/search/bubu+dudu-stickers">Bubu Dudu Stickers</a>
+                </div>
+            </div>
+            <div class="celebration">
+                <span class="heart">�</span>
+                <span class="heart">�</span>
+                <span class="heart">🩵</span>
+                <span class="heart">�</span>
+                <span class="heart">✨</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    
+    <!-- Debug: Test functions are working -->
+    <script>
+        // Ensure functions are available immediately
+        function testGoToPage(pageNum) {
+            console.log('Test function called for page', pageNum);
+            if (typeof window.goToPage === 'function') {
+                window.goToPage(pageNum);
+            } else {
+                console.error('goToPage function not found!');
+            }
+        }
+        
+        function testGoToFinal() {
+            console.log('Test final function called');
+            if (typeof window.goToFinalPage === 'function') {
+                window.goToFinalPage();
+            } else {
+                console.error('goToFinalPage function not found!');
+            }
+        }
+        
+        // Make test functions available
+        window.testGoToPage = testGoToPage;
+        window.testGoToFinal = testGoToFinal;
+    </script>
+    
+    <script src="script_new.js"></script>
+</body>
+</html>
